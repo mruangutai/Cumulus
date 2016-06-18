@@ -22,7 +22,7 @@ function getStateFromStores() {
   }
 }
 
-var FeedView = React.createClass({
+var LibraryView = React.createClass({
 
   getInitialState: function () {
     return getStateFromStores()
@@ -45,7 +45,7 @@ var FeedView = React.createClass({
   },
 
   componentDidMount: function() {
-    Actions.setVisibleTab('feed')
+    Actions.setVisibleTab('library')
   },
 
   _scrollListener: function() {
@@ -138,4 +138,4 @@ var FeedView = React.createClass({
 
 });
 
-module.exports = FeedView
+module.exports = LibraryView

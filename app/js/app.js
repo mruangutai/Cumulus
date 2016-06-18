@@ -9,7 +9,7 @@ var CumulusApp      = require('./components/CumulusApp');
 
 var About           = require('./components/aboutView');
 var Likes           = require('./components/likesView');
-var Feed            = require('./components/feedView');
+var Library         = require('./components/libraryView');
 var Playlists       = require('./components/playlistsView');
 
 var Config          = Remote.require('./lib/config');
@@ -21,7 +21,7 @@ var SoundCloud      = require('./utils/soundcloud');
 var Route  = Router.Route;
 var routes = (
   <Route handler={CumulusApp} >
-    <Router.DefaultRoute name="feed" handler={Feed}/>
+    <Router.DefaultRoute name="library" handler={Library}/>
     <Route name="likes" handler={Likes}/>
     <Route name="playlists" handler={Playlists}/>
     <Route name="about" handler={About}/>

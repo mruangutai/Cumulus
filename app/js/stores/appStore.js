@@ -92,7 +92,7 @@ var AppStore = McFly.createStore({
   function loadNewer(tab) {
 
     switch (payload.tab) {
-      case 'feed':
+      case 'library':
         loadNewerFeed()
         break
 

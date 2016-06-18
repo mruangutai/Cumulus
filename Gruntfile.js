@@ -63,7 +63,7 @@ module.exports = function(grunt) {
     electron: {
       osx: {
         options: {
-          appname         : 'Cumulus',
+          appname         : 'Wiredrive',
           dir             : '.',
           out             : 'dist',
           icon            : 'cumulus.icns',

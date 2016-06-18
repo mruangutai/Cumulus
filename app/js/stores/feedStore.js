@@ -66,7 +66,7 @@ var FeedStore = McFly.createStore({
   switch (payload.actionType) {
 
     case 'LOADED_FEED':
-      if (!AppStore.isVisibleTab('feed')) return
+      if (!AppStore.isVisibleTab('library')) return
 
       _loaded = true
       _next_href = payload.next_href
@@ -87,19 +87,19 @@ var FeedStore = McFly.createStore({
 
       _setFeed(payload.tracks)
 
-      if (AppStore.isActiveTab('feed'))
+      if (AppStore.isActiveTab('library'))
         Actions.setPlaylist(_getTracks(payload.tracks))
 
       break
 
     case 'PLAY_TRACK':
-      if (AppStore.isVisibleTab('feed'))
-        AppStore.setActiveTab('feed')
+      if (AppStore.isVisibleTab('library'))
+        AppStore.setActiveTab('library')
 
       break
 
     case 'NEXT_TRACK':
-      if (!AppStore.isActiveTab('feed')) return
+      if (!AppStore.isActiveTab('library')) return
 
       if (!PlaylistStore.peekNextTrack()) {
         Actions.fetchFeed({ next_href : _next_href })

@@ -10,13 +10,13 @@ var HeaderSection = React.createClass({
       <header>
         <ul>
           <li>
-            <Link to="feed">Feed</Link>
+            <Link to="library">Library</Link>
           </li>
           <li>
-            <Link to="likes">Likes</Link>
+            <Link to="likes">Projects</Link>
           </li>
           <li>
-            <Link to="playlists">Playlists</Link>
+            <Link to="playlists">Uploads</Link>
           </li>
         </ul>
       </header>

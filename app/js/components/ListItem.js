@@ -57,7 +57,7 @@ var ListItem = React.createClass({
     else if (this.isActive('playlists'))
       Actions.setPlaylist(require('../stores/playlistsStore').getTracks())
 
-    else if (this.isActive('feed'))
+    else if (this.isActive('library'))
       Actions.setPlaylist(require('../stores/feedStore').getTracks())
   },
 
